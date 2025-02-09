@@ -1,0 +1,42 @@
+
+
+<%!-- <.flash_group flash={@flash} /> --%>
+<.navbar id="" variant="default" >
+  <:start_content>
+    <.link
+      navigate="/path"
+      class="flex items-center space-x-3 rtl:space-x-reverse mb-5 md:mb-0"
+    >
+      <img src="/images/logo.png"  />
+      <p class="pb-3 text-2xl font-bold text-green_logo">
+        APP
+      </p>
+    </.link>
+  </:start_content>
+  <:list><.link title="aide" navigate="/help">Aide</.link></:list>
+
+  <:list><.link title="blog" navigate="/blog">Blog</.link></:list>
+  <!--
+  <:list><p>installer l'app<.link title="installation link" navigate="/pppp"><svg src="/assets/static/images/android_button.svg"></svg></.link></p></:list>
+    -->
+</.navbar>
+<main>
+  <section class="px-8 pb-10 bg-green_primary">
+    <h1 class="py-4 text-4xl font-bold">APP protège vos données,<br>APP protège la planète.</h1>
+    <div class="flex flex-row gap-x-10">
+      <div class="sm:basis-1/2">
+        <p>
+          Ici commence une expérience de messagerie vraiment différente.
+          Entrez dans un monde où la confidentialité et la protection de l’environnement sont de véritables priorités.
+          Retrouvez toutes les fonctionnalités que vous attendez et découvrez celles dont vous ne pourrez bientôt plus vous passer.
+        </p>
+        <%!-- <button class="bg-red-600">Danger</button> --%>
+        <LandingPageWeb.Components.Button.button variant="default" class="mt-10 bg-grey_light text-green_primary"><span class="font-bold">Installer APP</span></LandingPageWeb.Components.Button.button>
+      </div>
+      <div class="invisible sm:visible basis-1/2 aspect-square bg-grey_primary rounded-full"></div>
+    </div>
+  </section>
+  <p>redfreffjgirjgiorjggj</p>
+
+
+</main>
