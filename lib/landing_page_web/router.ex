@@ -16,7 +16,7 @@ defmodule LandingPageWeb.Router do
 
   scope "/", LandingPageWeb do
     pipe_through :browser
-
+    live "/species", SpeciesLive
     get "/", PageController, :home
   end
 
