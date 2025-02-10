@@ -8,5 +8,6 @@ defmodule LandingPageWeb.PageHTML do
   import LandingPageWeb.Components.Navbar
 
 
+
   embed_templates "page_html/*"
 end

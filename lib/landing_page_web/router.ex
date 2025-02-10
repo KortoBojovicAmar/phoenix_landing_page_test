@@ -16,8 +16,9 @@ defmodule LandingPageWeb.Router do
 
   scope "/", LandingPageWeb do
     pipe_through :browser
-    live "/species", SpeciesLive
+    # live "/species", SpeciesLive
     get "/", PageController, :home
+    live "/cards", PageLive, :index
   end
 
   # Other scopes may use custom stacks.

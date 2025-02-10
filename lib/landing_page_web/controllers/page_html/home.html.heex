@@ -19,10 +19,6 @@
     <:list><.link title="blog" navigate="/blog">Blog</.link></:list>
 
     <:list><.link title="animaux" navigate="/species">Animaux</.link></:list>
-
-    <!--
-    <:list><p>installer l'app<.link title="installation link" navigate="/pppp"><svg src="/assets/static/images/android_button.svg"></svg></.link></p></:list>
-      -->
   </.navbar>
 </header>
 <main>
@@ -57,11 +53,31 @@
           Intégrée au cœur de Signal dès sa conception, elle s’applique à tous les messages, à tous les appels, tout le temps.
         </p>
       </div>
-      <div class="sm:basis-1/2 aspect-square bg-green_secondary rounded-md flex flex-row">
-        <%!-- <div class="justify-self-center aspect-3/4 bg-green_primary rounded-md">fffeffeff</div>
-        <div></div>
-        <div></div> --%>
+      <div class="sm:basis-1/2 aspect-square bg-green_secondary rounded-md relative">
+        <div class="bg-green_primary rounded-md absolute p-5 top-16 right-10 border-4 border-green_logo rounded-tl-3xl rounded-bl-3xl rounded-tr-3xl"><span class="text-center text-3xl font-bold">Blabla ?</span></div>
+        <div class="bg-green_primary rounded-md absolute p-5 top-40 right-10 border-4 border-green_logo rounded-tl-3xl rounded-bl-3xl rounded-tr-3xl"><span class="text-center text-3xl font-bold">Blabla, blabla !</span></div>
+        <div class="bg-grey_primary rounded-md absolute p-5 bottom-10 left-10 border-4 border-grey_light rounded-tl-3xl rounded-bl-3xl rounded-tr-3xl"><span class="text-center text-3xl font-bold">Blabla ! Blabla ?</span></div>
       </div>
     </div>
   </section>
+  <%!-- <section class="px-12 py-10">
+    <h2 class="pt-8 pb-4 text-center text-3xl font-bold">Liste des cartes</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <%= for item <- @data do %>
+        <div class="card bg-white shadow-md rounded-lg p-6">
+          <h3 class="text-xl font-bold"><%= item["title"] %></h3>
+          <p class="text-lg"><%= item["description"] %></p>
+        </div>
+      <% end %>
+    </div>
+    <div class="flex justify-center mt-6">
+      <%= if @page > 1 do %>
+        <.link navigate={~p"/?page=#{@page - 1}"} class="btn btn-primary">Précédent</.link>
+      <% end %>
+      <.link navigate={~p"/?page=#{@page + 1}"} class="btn btn-primary ml-4">Suivant</.link>
+    </div>
+  </section> --%>
+
+    <%!-- <%= live_render(@conn, LandingPageWeb.PageLive, session: %{}) %> --%>
+    <%= live_component @conn, LandingPageWeb.PageComponent, id: "page-component" %>
 </main>
