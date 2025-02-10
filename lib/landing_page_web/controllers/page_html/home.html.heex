@@ -1,31 +1,34 @@
 
 
 <%!-- <.flash_group flash={@flash} /> --%>
-<.navbar id="" variant="default" >
-  <:start_content>
-    <.link
-      navigate="/path"
-      class="flex items-center space-x-3 rtl:space-x-reverse mb-5 md:mb-0"
-    >
-      <img src="/images/logo.png"  />
-      <p class="pb-3 text-2xl font-bold text-green_logo">
-        APP
-      </p>
-    </.link>
-  </:start_content>
-  <:list><.link title="aide" navigate="/help">Aide</.link></:list>
+<header>
+  <.navbar id="" variant="default" >
+    <:start_content>
+      <.link
+        navigate="/path"
+        class="flex items-center space-x-3 rtl:space-x-reverse mb-5 md:mb-0"
+      >
+        <img src="/images/logo.png"  />
+        <p class="pb-3 text-2xl font-bold text-green_logo">
+          APP
+        </p>
+      </.link>
+    </:start_content>
+    <:list><.link title="aide" navigate="/help">Aide</.link></:list>
 
-  <:list><.link title="blog" navigate="/blog">Blog</.link></:list>
-  <!--
-  <:list><p>installer l'app<.link title="installation link" navigate="/pppp"><svg src="/assets/static/images/android_button.svg"></svg></.link></p></:list>
-    -->
-</.navbar>
+    <:list><.link title="blog" navigate="/blog">Blog</.link></:list>
+    <!--
+    <:list><p>installer l'app<.link title="installation link" navigate="/pppp"><svg src="/assets/static/images/android_button.svg"></svg></.link></p></:list>
+      -->
+  </.navbar>
+</header>
 <main>
-  <section class="px-8 pb-10 bg-green_primary">
-    <h1 class="py-4 text-4xl font-bold">APP protège vos données,<br>APP protège la planète.</h1>
+  <section class="px-8 p-20 bg-green_primary">
+
     <div class="flex flex-row gap-x-10">
       <div class="sm:basis-1/2">
-        <p>
+        <h1 class="py-6 pt-20 text-4xl font-bold">APP protège vos données,<br>APP protège la planète.</h1>
+        <p class="font-semibold">
           Ici commence une expérience de messagerie vraiment différente.
           Entrez dans un monde où la confidentialité et la protection de l’environnement sont de véritables priorités.
           Retrouvez toutes les fonctionnalités que vous attendez et découvrez celles dont vous ne pourrez bientôt plus vous passer.
@@ -36,7 +39,20 @@
       <div class="invisible sm:visible basis-1/2 aspect-square bg-grey_primary rounded-full"></div>
     </div>
   </section>
-  <p>redfreffjgirjgiorjggj</p>
-
-
+  <section class="px-8 py-10">
+    <h2 class="pt-8 pb-4 text-center text-2xl font-bold">Pourquoi choisir APP ?</h2>
+    <p class="text-center font-semibold">Simplicité. Sécurité. Écologie. Découvrez ce qui fait d’App une messagerie vraiment à part.</p>
+    <div>
+    <div>
+      <h3 class="text-2xl font-bold pb-4">Zéro compromis sur la sécurité</h3>
+      <p class="font-semibold">
+        Nous avons développé une méthode de chiffrement de bout en bout ultramoderne, qui s’appuie sur notre protocole open source pour assurer la sécurité de vos conversations.
+        Nous ne pouvons ni lire vos messages, ni écouter vos appels. En clair : vous seul y avez accès. Et personne d’autre.
+        La confidentialité n’est pas une option facultative : elle fait partie de notre ADN.
+        Intégrée au cœur de Signal dès sa conception, elle s’applique à tous les messages, à tous les appels, tout le temps.
+      </p>
+    </div>
+    <div></div>
+    </div>
+  </section>
 </main>
