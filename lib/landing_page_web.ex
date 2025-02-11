@@ -54,7 +54,7 @@ defmodule LandingPageWeb do
     quote do
       use Phoenix.LiveView,
         layout: {LandingPageWeb.Layouts, :app}
-       use LandingPageWeb.Components.MishkaComponents
+      #  use LandingPageWeb.Components.MishkaComponents
 
        alias LandingPageWeb.Components.Button, as: CustomButton
 

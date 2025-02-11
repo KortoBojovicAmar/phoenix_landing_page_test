@@ -52,6 +52,7 @@ defmodule LandingPage.MixProject do
         compile: false,
         depth: 1},
       {:swoosh, "~> 1.5"},
+      {:heroicons_liveview, "~> 0.3.0"},
       {:finch, "~> 0.13"},
       {:httpoison, "~> 1.8"},
       {:telemetry_metrics, "~> 1.0"},

@@ -9,7 +9,8 @@ import Config
 
 config :landing_page,
   ecto_repos: [LandingPage.Repo],
-  generators: [timestamp_type: :utc_datetime]
+  generators: [timestamp_type: :utc_datetime],
+  api_ninjas_key: System.get_env("API_NINJAS_KEY")
 
 # Configures the endpoint
 config :landing_page, LandingPageWeb.Endpoint,
