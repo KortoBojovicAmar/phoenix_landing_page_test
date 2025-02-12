@@ -38,72 +38,77 @@ defmodule LandingPageWeb.SpeciesLive do
 
   def render(assigns) do
     ~H"""
-    <div class="container mx-auto p-4">
-      <header>
-        <LandingPageWeb.Components.Navbar.navbar id="" variant="default" >
-          <:start_content>
-            <.link
-              navigate="/"
-              class="flex items-center space-x-3 rtl:space-x-reverse mb-5 md:mb-0"
-            >
-              <img src="/images/logo.png" alt="le logo d'APP"/>
-              <p class="pb-3 text-2xl font-bold text-green_logo_contrast">
-                APP
-              </p>
-            </.link>
-          </:start_content>
-          <:list><.link title="aide" navigate="/">Aide</.link></:list>
+    <div class="flex justify-center">
+      <div class="max-w-5xl">
+        <header>
+          <LandingPageWeb.Components.Navbar.navbar id="" variant="default" >
+            <:start_content>
+              <.link
+                navigate="/"
+                class="flex items-center space-x-3 rtl:space-x-reverse mb-5 md:mb-0"
+              >
+                <img src="/images/logo.png" alt="le logo d'APP"/>
+                <p class="pb-3 text-2xl font-bold text-green_logo_contrast">
+                  APP
+                </p>
+              </.link>
+            </:start_content>
+            <:list><.link title="aide" navigate="/">Aide</.link></:list>
 
-          <:list><.link title="blog" navigate="/">Blog</.link></:list>
+            <:list><.link title="blog" navigate="/">Blog</.link></:list>
 
-          <:list><.link title="animaux" navigate="/">Retour à l'accueil</.link></:list>
+            <:list><.link title="animaux" navigate="/">Retour à l'accueil</.link></:list>
 
-          <!--
-          <:list><p>installer l'app<.link title="installation link" navigate="/pppp"><svg src="/assets/static/images/android_button.svg"></svg></.link></p></:list>
-            -->
-        </LandingPageWeb.Components.Navbar.navbar>
-      </header>
-      <main>
-        <h1 class="text-2xl font-bold mb-4">Liste des espèces menacées</h1>
-        <%!-- <a href="/" class="text-green_button">Retour à l'accueil</a> --%>
-
-        <%= if @species == [] do %>
-          <p class="text-gray-600">Aucune espèce menacée trouvée</p>
-        <% end %>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <%= for animal <- @species do %>
-          <div class="card bg-grey_light shadow-xl rounded-lg overflow-hidden">
-              <div class="p-0 ">
-                <h2 class="text-xl font-bold bg-green_secondary p-3 rounded-lg-t"><%= animal["name"] %></h2>
-                <LandingPageWeb.Components.Card.card_media class="w-full" src="/images/88_des_français.png" alt="image de l'animal"/>
-                <LandingPageWeb.Components.Card.card_content class="p-4 space-y-2 pt-3">
-                  <p class="text-black font-semibold"><span class="font-bold">Habitat :</span> <%= animal["characteristics"]["habitat"] %></p>
-                  <p class="text-black font-semibold"><span class="font-bold">Régime :</span> <%= animal["characteristics"]["diet"] %></p>
-                  <p class="text-black font-semibold"><span class="font-bold">Menace principale :</span> <%= animal["characteristics"]["biggest_threat"] %></p>
-                  <p class="text-black font-semibold"><span class="font-bold">Localisation :</span> <%= Enum.join(animal["locations"], ", ") %></p>
-                </LandingPageWeb.Components.Card.card_content>
-              </div>
-            </div>
+            <!--
+            <:list><p>installer l'app<.link title="installation link" navigate="/pppp"><svg src="/assets/static/images/android_button.svg"></svg></.link></p></:list>
+              -->
+          </LandingPageWeb.Components.Navbar.navbar>
+        </header>
+        <main>
+        <section class="px-12 py-20 bg-green_primary">
+          <h1 class="p-8 text-center text-3xl font-bold">Voici les espèces que vous pouvez aider en nous rejoignant.</h1>
+          <p class="text-center text-lg font-medium">
+            App s'engage sur la protection des espèces menacées.
+            En rejoignant notre application, vous participez à la protection de ces animaux.
+          </p>
+        </section>
+          <%= if @species == [] do %>
+            <p class="text-gray-600">Aucune espèce menacée trouvée</p>
           <% end %>
-        </div>
-        <div class="flex justify-center pt-10 pb-20">
-          <div class="mt-4 space-x-2">
-            <button phx-click="prev_page" disabled={@page == 1} class="px-4 py-2 bg-green_button text-grey_light rounded disabled:opacity-50">
-              Précédent
-            </button>
-            <span class="px-4 py-2 text-black">
-              Page <%= @page %>
-            </span>
-            <button phx-click="next_page" class="px-4 py-2 bg-green_button text-grey_light rounded">
-              Suivant
-            </button>
+        <section class="container mx-auto p-8  bg-grey_light pt-20">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <%= for animal <- @species do %>
+            <div class="card bg-grey_light shadow-xl rounded-lg overflow-hidden">
+                <div class="p-0 bg-grey_primary">
+                  <h2 class="text-xl font-bold bg-green_secondary p-3 rounded-lg-t"><%= animal["name"] %></h2>
+                  <LandingPageWeb.Components.Card.card_media class="w-full" src="/images/chimere_etrusque.jpg" alt="image de l'animal"/>
+                  <LandingPageWeb.Components.Card.card_content class="p-4 space-y-2 pt-3 bg-grey_light">
+                    <p class="text-black font-semibold"><span class="font-bold">Habitat :</span> <%= animal["characteristics"]["habitat"] %></p>
+                    <p class="text-black font-semibold"><span class="font-bold">Régime :</span> <%= animal["characteristics"]["diet"] %></p>
+                    <p class="text-black font-semibold"><span class="font-bold">Menace principale :</span> <%= animal["characteristics"]["biggest_threat"] %></p>
+                    <p class="text-black font-semibold"><span class="font-bold">Localisation :</span> <%= Enum.join(animal["locations"], ", ") %></p>
+                  </LandingPageWeb.Components.Card.card_content>
+                </div>
+              </div>
+            <% end %>
           </div>
-        </div>
-
-      </main>
-
-      <LandingPageWeb.Components.Footer.footer class="bg-green_primary py-20" variant="bordered" font_weight="font-bold" text_position="center">efezfjzpoifgjofgzeroig</LandingPageWeb.Components.Footer.footer>
+          <div class="flex justify-center pt-10 pb-20">
+            <div class="mt-4 space-x-2">
+              <button phx-click="prev_page" disabled={@page == 1} class="px-4 py-2 bg-green_button text-grey_light rounded disabled:opacity-50">
+                Précédent
+              </button>
+              <span class="px-4 py-2 text-black">
+                Page <%= @page %>
+              </span>
+              <button phx-click="next_page" class="px-4 py-2 bg-green_button text-grey_light rounded">
+                Suivant
+              </button>
+            </div>
+          </div>
+        </section>
+        </main>
+        <LandingPageWeb.Components.Footer.footer class="bg-green_primary py-20" variant="bordered" font_weight="font-bold" text_position="center">tout droit reservé - App&#169; - 2025</LandingPageWeb.Components.Footer.footer>
+      </div>
     </div>
     """
   end

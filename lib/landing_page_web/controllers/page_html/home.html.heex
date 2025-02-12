@@ -18,19 +18,12 @@
           </.link>
         </:start_content>
         <:list><.link title="aide" navigate="/">Aide</.link></:list>
-
         <:list><.link title="blog" navigate="/">Blog</.link></:list>
-
         <:list><.link title="animaux" navigate="/species">Animaux</.link></:list>
-
-        <!--
-        <:list><p>installer l'app<.link title="installation link" navigate="/pppp"><svg src="/assets/static/images/android_button.svg"></svg></.link></p></:list>
-          -->
       </.navbar>
     </header>
     <main>
       <section class="px-12 p-20 bg-green_primary">
-
         <div class="flex flex-row gap-x-10">
           <div class="sm:basis-1/2">
             <h1 class="py-6 pt-20 text-4xl font-bold">APP protège vos données,<br>APP protège la planète.</h1>
@@ -39,9 +32,7 @@
               Entrez dans un monde où la confidentialité et la protection de l’environnement sont de véritables priorités.
               Retrouvez toutes les fonctionnalités que vous attendez et découvrez celles dont vous ne pourrez bientôt plus vous passer.
             </p>
-            <%!-- <button class="bg-red-600">Danger</button> --%>
             <LandingPageWeb.Components.Button.button variant="default" class="mt-10 bg-grey_light text-green_button"><span class="font-bold">Installer APP</span></LandingPageWeb.Components.Button.button>
-      
           </div>
           <div class="aspect-square basis-1/2">
             <div class="invisible sm:visible  aspect-square bg-grey_primary rounded-full"></div>
@@ -51,18 +42,18 @@
       <section class="px-12 py-10">
         <h2 class="pt-8 pb-4 text-center text-3xl font-bold">Pourquoi choisir APP ?</h2>
         <p class="text-center text-lg font-medium">Simplicité. Sécurité. Écologie. Découvrez ce qui fait d’App une messagerie vraiment à part.</p>
-        <div class="pt-10 flex sm:flex-col lg:flex-row gap-x-10">
-          <div class="md:basis-1/2">
-            <h3 class="text-3xl font-bold pb-4">Zéro compromis sur la sécurité</h3>
-            <p class="text-lg font-medium mr-8">
+        <div class="pt-10 flex max-sm:flex-col sm:flex-col lg:flex-row gap-x-10">
+          <div class="lg:basis-1/2">
+            <h3 class="text-3xl font-bold pb-4 text-center lg:text-left">Zéro compromis sur la sécurité</h3>
+            <p class="text-lg font-medium mr-8 w-full text-left">
               Nous avons développé une méthode de chiffrement de bout en bout ultramoderne, qui s’appuie sur notre protocole open source pour assurer la sécurité de vos conversations.
               Nous ne pouvons ni lire vos messages, ni écouter vos appels. En clair : vous seul y avez accès. Et personne d’autre.
               La confidentialité n’est pas une option facultative : elle fait partie de notre ADN.
               Intégrée au cœur de Signal dès sa conception, elle s’applique à tous les messages, à tous les appels, tout le temps.
             </p>
           </div>
-          <div class="md:w-3xs lg:basis-1/2 aspect-square">
-            <div class="invisible sm:visible aspect-square bg-green_secondary rounded-md relative">
+          <div class="md:w-3xs lg:basis-1/2 aspect-square max-lg:pt-10">
+            <div class="aspect-square bg-green_secondary rounded-md relative">
               <div class="invisible sm:visible bg-green_primary rounded-md absolute p-5 top-16 right-10 border-4 border-green_logo rounded-tl-3xl rounded-bl-3xl rounded-tr-3xl"><span class="text-center text-3xl font-bold">Blabla ?</span></div>
               <div class="invisible sm:visible bg-green_primary rounded-md absolute p-5 top-40 right-10 border-4 border-green_logo rounded-tl-3xl rounded-bl-3xl rounded-tr-3xl"><span class="text-center text-3xl font-bold">Blabla, blabla !</span></div>
               <div class="invisible sm:visible right-10 bg-grey_primary rounded-md absolute sm:p-5 sm:bottom-10 sm:left-10 border-4 border-grey_light rounded-tl-3xl rounded-br-3xl rounded-tr-3xl"><span class="text-center text-3xl font-bold">Blabla ! Blabla ?</span></div>
@@ -77,80 +68,12 @@
           En prime vous supportez la protection d'espèces menacées.
         </p>
         <div class="flex justify-end pt-3">
-        <a href="/species" class="underline">accèder à la liste des animaux en danger </a>
-        <LandingPageWeb.Components.Badge.badge icon="hero-bookmark" icon_class="size-4" />
-
+          <a href="/species" class="underline">accèder à la liste des animaux en danger &#10132;</a>
         </div>
       </section>
     </main>
-    <%!-- <footer class="py-10 bg-slate-500 flex justify-center">
-      <p class="py-5 text-lg font-medium">App - 2025</p>
-    </footer> --%>
-    <LandingPageWeb.Components.Footer.footer class="bg-green_primary py-20" variant="bordered" font_weight="font-bold" text_position="center">efezfjzpoifgjofgzeroig</LandingPageWeb.Components.Footer.footer>
-
-    <div class="container mx-auto p-4">
-      <h1 class="text-2xl font-bold mb-4">Liste des espèces menacées</h1>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          <div class="card  shadow-xl rounded-lg overflow-hidden">
-            <div class="p-4">
-              <h2 class="text-xl font-bold mb-2 bg-green_secondary p-2 rounded-lg-t -mx-4 -mt-4">Bibdadou</h2>
-              <LandingPageWeb.Components.Card.card_media src="/images/astuces_écolos.png" alt="image de l'animal"/>
-              <LandingPageWeb.Components.Card.card_content class="space-y-2 pt-3 bg-grey_primary">
-                <p class="text-black font-semibold"><span class="font-bold">Habitat :</span> forêt</p>
-                <p class="text-black font-semibold"><span class="font-bold">Régime :</span> veggie</p>
-                <p class="text-black font-semibold"><span class="font-bold">Menace principale :</span> braconnage</p>
-                <p class="text-black font-semibold"><span class="font-bold">Localisation :</span> asie</p>
-              </LandingPageWeb.Components.Card.card_content>
-            </div>
-          </div>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          <div class="card  shadow-xl rounded-lg overflow-hidden">
-            <div class="p-0 bg-grey_primary">
-              <h2 class="text-xl font-bold bg-green_secondary p-3 rounded-lg-t">Bibdadou</h2>
-              <LandingPageWeb.Components.Card.card_media class="w-full" src="/images/88_des_français.png" alt="image de l'animal"/>
-              <LandingPageWeb.Components.Card.card_content class="p-4 space-y-2 pt-3 bg-grey_light">
-                <p class="text-black font-semibold"><span class="font-bold">Habitat :</span> forêt</p>
-                <p class="text-black font-semibold"><span class="font-bold">Régime :</span> veggie</p>
-                <p class="text-black font-semibold"><span class="font-bold">Menace principale :</span> braconnage</p>
-                <p class="text-black font-semibold"><span class="font-bold">Localisation :</span> asie</p>
-              </LandingPageWeb.Components.Card.card_content>
-            </div>
-          </div>
-      </div>
-
-      <LandingPageWeb.Components.Card.card rounded="large">
-        <LandingPageWeb.Components.Card.card_title title="Nom" class="font-extrabold" />
-        <LandingPageWeb.Components.Card.card_media src="/images/astuces_écolos.png" alt=""/>
-        <LandingPageWeb.Components.Card.card_content>
-          <!--Content goes here-->
-        </LandingPageWeb.Components.Card.card_content>
-      </LandingPageWeb.Components.Card.card>
-
-      <div class="flex justify-center">
-        <div class="mt-4 space-x-2">
-          <button
-            phx-click="prev_page"
-            class="px-4 py-2 bg-green_button text-grey_light rounded disabled:opacity-50"
-          >
-            Précédent
-          </button>
-          <button
-            phx-click="next_page"
-            class="px-4 py-2 bg-green_button text-grey_light rounded"
-          >
-            Suivant
-          </button>
-        </div>
-      </div>
-
-      <%!-- <LandingPageWeb.Components.Pagination.pagination   color="success" 
-  variant="outline"
-  total_pages={10}  
-  current_page={1}
-  on_page_change="handle_page_change"/> --%>
-    </div>
+    <LandingPageWeb.Components.Footer.footer class="bg-green_primary py-20" variant="bordered" font_weight="font-bold" text_position="center">
+      tout droit reservé - App&#169; - 2025
+    </LandingPageWeb.Components.Footer.footer>
   </div>
 </div>
